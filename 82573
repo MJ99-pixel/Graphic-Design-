@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Free Online Graphic Design Class for Beginners</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Join our free online graphic design class for beginners and aspiring creatives. Learn Photoshop, Illustrator, color theory, and more from industry pros.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900;700;500;400&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://img.icons8.com/color/96/000000/design--v1.png" />
+  <style>
+    :root {
+      --purple: #7F53FF;
+      --teal: #43e6d8;
+      --coral: #ff7d7d;
+      --gradient-main: linear-gradient(100deg, var(--purple) 0%, var(--teal) 70%, var(--coral) 100%);
+      --gradient-accent: linear-gradient(120deg, #43e6d8 0%, #7f53ff 60%, #ff7d7d 100%);
+      --gray-bg: #F7F8FD;
+      --dark: #25243a;
+      --light: #ffffff;
+      --shadow: 0 10px 36px 0 rgba(31, 36, 57, 0.07);
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      background: var(--gray-bg);
+      font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+      color: var(--dark);
+    }
+    header {
+      background: var(--gradient-main);
+      padding: 0 0 60px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .curve-divider {
+      display: block;
+      width: 100%;
+      height: 70px;
+      margin-top: -1px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 60px 0 0 0;
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 900;
+      color: var(--light);
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+      text-shadow: 0 10px 20px rgba(31,36,57,0.13);
+    }
+    .hero .subtitle {
+      font-size: 1.25rem;
+      color: #E1E6F4;
+      margin-bottom: 34px;
+      font-weight: 500;
+    }
+    .hero-visual {
+      width: 360px;
+      margin: 0 auto 32px auto;
+      position: relative;
+      animation: heroFadeIn 1.4s;
+    }
+    @keyframes heroFadeIn {
+      from { opacity: 0; transform: translateY(30px);}
+      to   { opacity: 1; transform: none;}
+    }
+    .cta-main {
+      background: var(--gradient-accent);
+      border: none;
+      color: var(--light);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      padding: 16px 44px;
+      border-radius: 32px;
+      box-shadow: 0 4px 32px rgba(127, 83, 255, 0.16);
+      cursor: pointer;
+      transition: transform .16s, box-shadow .16s, background .24s;
+      margin-top: 10px;
+      margin-bottom: 18px;
+      letter-spacing: .5px;
+    }
+    .cta-main:hover, .cta-main:focus {
+      transform: translateY(-3px) scale(1.05);
+      background: var(--gradient-main);
+      box-shadow: 0 8px 36px rgba(67, 230, 216, 0.18);
+    }
+    .countdown-box {
+      background: rgba(255,255,255,0.25);
+      backdrop-filter: blur(2px);
+      border-radius: 16px;
+      display: inline-block;
+      margin: 30px auto 0 auto;
+      padding: 12px 32px 10px 32px;
+      box-shadow: 0 3px 12px rgba(127,83,255,0.08);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+    .section {
+      margin: 0 auto;
+      padding: 70px 0 50px 0;
+      position: relative;
+      background: var(--light);
+    }
+    .section.bg-alt {
+      background: var(--gray-bg);
+    }
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--purple);
+      margin-bottom: 16px;
+      text-align: center;
+      letter-spacing: -1px;
+    }
+    .section-subtitle {
+      text-align: center;
+      color: #5e5c7f;
+      margin-bottom: 36px;
+      font-size: 1.1rem;
+    }
+    /* Curriculum */
+    .curriculum-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px 42px;
+      max-width: 800px;
+      margin: 0 auto 10px auto;
+      padding: 0;
+      list-style: none;
+    }
+    .curriculum-item {
+      background: #fafbff;
+      border-radius: 16px;
+      padding: 22px 24px 16px 24px;
+      box-shadow: 0 2px 12px rgba(127,83,255,0.06);
+      font-weight: 600;
+      color: #353563;
+      font-size: 1.08rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      transition: box-shadow .19s;
+    }
+    .curriculum-item i {
+      font-size: 1.7rem;
+      color: var(--teal);
+      margin-right: 8px;
+    }
+    .curriculum-item:hover {
+      box-shadow: 0 8px 32px rgba(67,230,216,0.09);
+    }
+    /* Instructor Bio */
+    .instructor-bio {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 34px;
+      align-items: center;
+      max-width: 700px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 36px 32px;
+    }
+    .instructor-photo {
+      flex: 0 0 110px;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 24px rgba(127,83,255,0.17);
+      border: 4px solid var(--teal);
+      background: #fafbff;
+    }
+    .instructor-info {
+      flex: 1;
+      min-width: 220px;
+    }
+    .instructor-info h3 {
+      margin: 0 0 7px 0;
+      color: var(--purple);
+      font-size: 1.22rem;
+      font-family: 'Montserrat',sans-serif;
+      font-weight: 800;
+    }
+    .instructor-info p {
+      color: #474778;
+      font-size: 1.05rem;
+      margin: 0 0 10px 0;
+    }
+    .instructor-tools {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-top: 12px;
+    }
+    .instructor-tools img {
+      width: 32px; height: 32px;
+      border-radius: 7px;
+      background: #f0f3fa;
+      padding: 3px;
+      box-shadow: 0 2px 8px rgba(127,83,255,.09);
+    }
+    /* Testimonials */
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 26px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .testimonial {
+      background: #fff;
+      border-radius: 19px;
+      box-shadow: 0 4px 18px rgba(255,127,127,.07);
+      padding: 22px 22px 19px 22px;
+      max-width: 320px;
+      min-width: 220px;
+      flex: 1 1 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+    }
+    .testimonial .quote {
+      color: var(--coral);
+      font-size: 1.5rem;
+      line-height: .7;
+      margin-bottom: 9px;
+    }
+    .testimonial-content {
+      color: #444;
+      font-size: 1.06rem;
+      margin-bottom: 16px;
+    }
+    .testimonial-user {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testimonial-user img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ffbdbd;
+    }
+    .testimonial-user .name {
+      font-weight: 700;
+      color: var(--purple);
+      font-size: 1rem;
+    }
+    /* Responsive */
+    @media (max-width: 900px) {
+      .curriculum-list { grid-template-columns: 1fr; }
+      .instructor-bio { flex-direction: column; align-items: flex-start; }
+      .hero-visual { width: 96vw; max-width: 420px;}
+    }
+    @media (max-width: 600px) {
+      .section, .section.bg-alt, .container {padding-left: 10px; padding-right: 10px;}
+      .hero {padding-top: 32px;}
+      .hero h1 {font-size: 2rem;}
+      .curriculum-item {padding: 18px 12px;}
+      .instructor-bio {padding: 24px 8px;}
+      .testimonials {gap: 10px;}
+      .testimonial {padding: 13px 9px 12px 9px;}
+    }
+    /* Section Dividers */
+    .divider-svg {
+      display: block;
+      width: 100%;
+      height: 60px;
+      margin: 0;
+      background: transparent;
+    }
+    /* Smooth scroll effect for anchor */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container hero">
+      <h1>Free Online Graphic Design Class<br>for Beginners</h1>
+      <div class="subtitle">Unlock your creative potential. Learn Photoshop, Illustrator, color theory, and more — <b>no experience needed!</b></div>
+      <div class="hero-visual">
+        <!-- SVG Illustration of laptop and design tools -->
+        <svg viewBox="0 0 400 220" width="100%" height="auto" fill="none">
+          <rect x="40" y="50" width="320" height="110" rx="18" fill="#fff" stroke="#e8e3f8" stroke-width="3"/>
+          <rect x="70" y="70" width="260" height="70" rx="10" fill="#f3f3fa"/>
+          <!-- Laptop base -->
+          <rect x="55" y="160" width="290" height="24" rx="7" fill="#e9e6fb"/>
+          <!-- Design tools (icons) -->
+          <circle cx="90" cy="92" r="18" fill="#7F53FF"/>
+          <text x="78" y="100" font-size="22" font-family="Arial" fill="#fff">Ps</text>
+          <circle cx="140" cy="92" r="18" fill="#43e6d8"/>
+          <text x="128" y="100" font-size="22" font-family="Arial" fill="#fff">Ai</text>
+          <rect x="190" y="78" width="36" height="28" rx="8" fill="#ff7d7d"/>
+          <text x="196" y="98" font-size="17" font-family="Arial" fill="#fff">🎨</text>
+          <ellipse cx="250" cy="92" rx="17" ry="17" fill="#ff7d7d"/>
+          <text x="241" y="99" font-size="19" font-family="Arial" fill="#fff">🖼️</text>
+          <ellipse cx="300" cy="92" rx="17" ry="17" fill="#7F53FF"/>
+          <text x="292" y="98" font-size="17" font-family="Arial" fill="#fff">💡</text>
+          <!-- Moodboard rectangles -->
+          <rect x="110" y="120" width="40" height="14" rx="4" fill="#43e6d8"/>
+          <rect x="162" y="120" width="40" height="14" rx="4" fill="#ff7d7d"/>
+          <rect x="214" y="120" width="40" height="14" rx="4" fill="#7F53FF"/>
+        </svg>
+      </div>
+      <a href="#signup" class="cta-main">Join Free Class Now</a>
+      <div class="countdown-box" id="countdown">
+        Class Starts In: <span id="timer">03d 12h 15m 44s</span>
+      </div>
+    </div>
+    <!-- Section divider curve -->
+    <svg class="curve-divider" viewBox="0 0 1440 70" preserveAspectRatio="none"><path fill="#fff" d="M0,32 C300,100 1140,0 1440,50 L1440,70 L0,70 Z"></path></svg>
+  </header>
+  
+  <section class="section">
+    <div class="container">
+      <div class="section-title">What You'll Learn</div>
+      <div class="section-subtitle">Master industry-standard tools and creative skills in just a few lessons.</div>
+      <ul class="curriculum-list">
+        <li class="curriculum-item"><i>🎨</i> Introduction to Graphic Design Principles & Color Theory</li>
+        <li class="curriculum-item"><i>🖌️</i> Hands-on with <b>Adobe Photoshop</b>: Editing & Manipulation</li>
+        <li class="curriculum-item"><i>🖍️</i> Vector Graphics & Logo Design in <b>Adobe Illustrator</b></li>
+        <li class="curriculum-item"><i>📐</i> Typography, Moodboards, and Layouts</li>
+        <li class="curriculum-item"><i>📱</i> Social Media Visuals & Portfolio Tips</li>
+        <li class="curriculum-item"><i>👩‍🎨</i> Creative Exercises & Real-World Projects</li>
+      </ul>
+    </div>
+    <svg class="divider-svg" viewBox="0 0 1440 60" preserveAspectRatio="none"><path fill="#F7F8FD" d="M0,10 C400,60 1040,0 1440,40 L1440,60 L0,60 Z"></path></svg>
+  </section>
+
+  <section class="section bg-alt">
+    <div class="container">
+      <div class="section-title">Meet Your Instructor</div>
+      <div class="instructor-bio">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Instructor" class="instructor-photo" />
+        <div class="instructor-info">
+          <h3>Li Hua</h3>
+          <p>Award-winning graphic designer with 9+ years experience in branding, UI/UX, and digital illustration. Sarah has trained 400+ students and worked with top creative agencies.</p>
+          <p>Certified expert in:</p>
+          <div class="instructor-tools">
+            <img src="https://img.icons8.com/color/48/000000/adobe-photoshop.png" alt="Photoshop" title="Adobe Photoshop" />
+            <img src="https://img.icons8.com/color/48/000000/adobe-illustrator.png" alt="Illustrator" title="Adobe Illustrator" />
+            <img src="https://img.icons8.com/color/48/000000/figma--v1.png" alt="Figma" title="Figma" />
+            <img src="https://img.icons8.com/color/48/000000/canva.png" alt="Canva" title="Canva" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg class="divider-svg" viewBox="0 0 1440 60" preserveAspectRatio="none"><path fill="#fff" d="M0,30 C380,80 1060,0 1440,50 L1440,60 L0,60 Z"></path></svg>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">Student Success Stories</div>
+      <div class="section-subtitle">
+        Thousands have taken our class. Here’s what a few of them say!
+      </div>
+      <div class="testimonials">
+        <div class="testimonial">
+          <div class="quote">“</div>
+          <div class="testimonial-content">
+            This class made design tools finally make sense! I created my first logo and got freelance work within 2 weeks.
+          </div>
+          <div class="testimonial-user">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="user1">
+            <span class="name">James A.</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="quote">“</div>
+          <div class="testimonial-content">
+            The lessons are clear and fun. Sarah is an inspiring teacher. Highly recommended for anyone starting out!
+          </div>
+          <div class="testimonial-user">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="user2">
+            <span class="name">Lina R.</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="quote">“</div>
+          <div class="testimonial-content">
+            Loved the creative exercises and portfolio tips. I now feel confident to apply for designer jobs.
+          </div>
+          <div class="testimonial-user">
+            <img src="https://randomuser.me/api/portraits/men/88.jpg" alt="user3">
+            <span class="name">Alex H.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg class="divider-svg" viewBox="0 0 1440 60" preserveAspectRatio="none"><path fill="#F7F8FD" d="M0,15 C480,50 960,0 1440,40 L1440,60 L0,60 Z"></path></svg>
+  </section>
+
+  <section class="section bg-alt" id="signup">
+    <div class="container" style="text-align:center;">
+      <div class="section-title" style="margin-bottom:24px;">Ready to Start?</div>
+      <div class="section-subtitle" style="margin-bottom:30px;">
+        Secure your spot — the next free class starts soon!
+      </div>
+      <a href="#" class="cta-main" style="font-size:1.3rem;">Join Free Class Now</a>
+      <div style="font-size:.99rem;color:#737399;margin-top:14px;">
+        No credit card required. 100% beginner-friendly.
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:var(--gradient-main);padding:38px 0 18px 0;text-align:center;color:#fff;font-size:1.1rem;letter-spacing:.2px;">
+    &copy; 2025 CreativeDesignClass.com — Unleash Your Creativity!
+  </footer>
+  <script>
+    // Countdown Timer (set to 3 days from now for demo)
+    function startCountdown(duration, display) {
+      function update() {
+        let t = duration - Math.floor((Date.now() - start) / 1000);
+        if (t < 0) t = 0;
+        let d = Math.floor(t / 86400),
+            h = Math.floor((t % 86400) / 3600),
+            m = Math.floor((t % 3600) / 60),
+            s = t % 60;
+        display.textContent = `${d.toString().padStart(2,'0')}d ` +
+                             `${h.toString().padStart(2,'0')}h ` +
+                             `${m.toString().padStart(2,'0')}m ` +
+                             `${s.toString().padStart(2,'0')}s`;
+        if (t > 0) setTimeout(update, 1000);
+      }
+      let start = Date.now();
+      update();
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+      let timer = document.getElementById('timer');
+      // 3 days, 12 hours, 15 min, 44 sec from now
+      startCountdown(3*24*3600+12*3600+15*60+44, timer);
+    });
+  </script>
+</body>
+</html>
